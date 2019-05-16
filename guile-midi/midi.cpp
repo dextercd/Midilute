@@ -17,7 +17,7 @@ struct midi_reader {
 		, port{p}
 	{}
 
-	midi_reader& operator=(const midi_reader&) = delete;
+	midi_reader(midi_reader&&) = delete;
 
 	~midi_reader()
 	{
