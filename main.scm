@@ -8,6 +8,7 @@
 
 (define (midi-to-mordhau midi) (- midi 44))
 
+;; The lute in Mordhau has a very limited range.
 (define (in-mordhau-range? value) (<= 0 value 24))
 
 (define (mordhau-eqcommand-string value)
