@@ -11,8 +11,8 @@ wrote unfortunately only works on Linux.
 
 It uses Guile and ALSA.
 
-	* Guile runs on Windows via Cygwin or MinGW, but 
-	* ALSA only runs on Linux.
+* Guile runs on Windows via Cygwin or MinGW, but 
+* ALSA only runs on Linux.
 
 If you want something like this for Windows:
 
@@ -48,7 +48,7 @@ client 128: 'mordhau input' [type=user,pid=19573]
     0 'Mordhau input   '
 
 # Digital piano is my midi device, Mordhau input is the virtual device that we
-# want to connect with.
+# want to connect to.
 
 $ aconnect 28:0 128:0
 
