@@ -1,6 +1,6 @@
 (load-extension "libguilemidi" "init")
 
-(define midi-reader (midi-open-reader "mordhau input"))
+(define midi-reader (midi-open-reader "Mordhau input"))
 
 (define (single-char-string str)
 	(map (lambda (c) (make-string 1 c))
