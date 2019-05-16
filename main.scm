@@ -22,5 +22,8 @@
 		(if (in-mordhau-range? value)
 			(begin
 				(send-key-strokes "`" (mordhau-eqcommand-string value) "\r")
-				(usleep 20000)))))
+				;; When two notes are played at the same time somtimes one of
+				;; the notes is lost, so sleep a little bit to hopefully prevent
+				;; that. (0.16667 is 1/60 of a second, AKA one in-game frame)
+				(usleep 16667)))))
 	(loop))
