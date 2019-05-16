@@ -45,7 +45,7 @@ client 14: 'Midi Through' [type=kernel]
     0 'Midi Through Port-0'
 client 28: 'Digital Piano' [type=kernel,card=3]
     0 'Digital Piano MIDI 1'
-client 128: 'mordhau input' [type=user,pid=19573]
+client 128: 'Mordhau input' [type=user,pid=19573]
     0 'Mordhau input   '
 
 # Digital piano is my midi device, Mordhau input is the virtual device that we
