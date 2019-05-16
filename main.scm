@@ -24,11 +24,3 @@
 				(send-key-strokes "`" (mordhau-eqcommand-string (midi-to-mordhau midi)) "\r")
 				(usleep 20000)))))
 	(loop))
-
-; In mordhau, let's assume 16 is middle C
-; which is 60 in midi
-; Mordhau's range appears to be 0 - 100
-; My keyboards is 21 - 108
-; (midi-to-mordhau n (- n 44))
-		                   ;"key" "shift+grave" ,@(single-char-string "equipmentcommand")))))
-
