@@ -21,6 +21,6 @@
 	       (value (midi-to-mordhau midi)))
 		(if (in-mordhau-range? value)
 			(begin
-				(send-key-strokes "`" (mordhau-eqcommand-string (midi-to-mordhau midi)) "\r")
+				(send-key-strokes "`" (mordhau-eqcommand-string value) "\r")
 				(usleep 20000)))))
 	(loop))
