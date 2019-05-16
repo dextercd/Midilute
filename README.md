@@ -9,14 +9,15 @@ I wrote this program for myself, but decided to publish it. I play Mordhau **on
 Linux** via software made by Valve called Proton. Because of this the program I
 wrote unfortunately only works on Linux.
 
-It uses Guile and ALSA.
+It uses Guile, ALSA, and xdotool.
 
 * Guile runs on Windows via Cygwin or MinGW, but 
 * ALSA only runs on Linux.
+* xdotool is available on many \*nix platforms.
 
 If you want something like this for Windows:
 
-I know that the creator of Lutebot is [working on a new version that has midi device support.](https://mordhau.com/forum/topic/13519/mordhau-lute-bot/?page=10#c182).
+I know that the creator of Lutebot is [working on a new version that has midi device support](https://mordhau.com/forum/topic/13519/mordhau-lute-bot/?page=10#c182).
 There is also [another project](https://github.com/Pygex/LuteController) that seems to support this feature.
 
 ## How to use the program
