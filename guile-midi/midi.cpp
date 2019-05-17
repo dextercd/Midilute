@@ -58,7 +58,7 @@ std::string scheme_to_std_string(SCM str)
 
 	std::string string(cstr, length);
 
-	free(cstr);
+	std::free(cstr);
 
 	return string;
 }
