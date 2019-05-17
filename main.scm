@@ -2,10 +2,6 @@
 
 (define midi-reader (midi-open-reader "Mordhau input"))
 
-(define (single-char-string str)
-	(map (lambda (c) (make-string 1 c))
-	     (string->list str)))
-
 (define (midi-to-mordhau midi) (- midi 44))
 
 ;; The lute in Mordhau has a very limited range.
