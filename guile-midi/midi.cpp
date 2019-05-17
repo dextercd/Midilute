@@ -105,16 +105,10 @@ SCM midi_blocking_read(SCM scheme_reader)
 	return scm_from_int((int)event->data.note.note);
 }
 
-SCM midi_non_blocking_read(SCM scheme_reader)
-{
-	return scm_from_int(1);
-}
-
 extern "C" void init()
 {
 	make_midi_reader_type();
 
 	scm_c_define_gsubr("midi-open-reader",       1, 0, 0, reinterpret_cast<void*>(midi_open_reader));
 	scm_c_define_gsubr("midi-blocking-read",     1, 0, 0, reinterpret_cast<void*>(midi_blocking_read));
-	scm_c_define_gsubr("midi-non-blocking-read", 1, 0, 0, reinterpret_cast<void*>(midi_non_blocking_read));
 }
