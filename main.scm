@@ -7,7 +7,7 @@
 ;; The lute in Mordhau has a very limited range.
 (define (in-mordhau-range? value) (<= 0 value 24))
 
-(define (mordhau-eqcommand-string value)
+(define (mordhau-equipmentcommand-string value)
 	(string-append "equipmentcommand " (number->string value)))
 
 (define (send-key-strokes . rest)
@@ -18,7 +18,7 @@
 	       (value (midi-to-mordhau midi)))
 		(if (in-mordhau-range? value)
 			(begin
-				(send-key-strokes "`" (mordhau-eqcommand-string value) "\r")
+				(send-key-strokes "`" (mordhau-equipmentcommand-string value) "\r")
 				;; When two notes are played at the same time somtimes one of
 				;; the notes is lost, so sleep a little bit to hopefully prevent
 				;; that. (0.16667 is 1/60 of a second, AKA one in-game frame)
