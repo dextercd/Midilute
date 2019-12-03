@@ -22,5 +22,5 @@
 				;; When two notes are played at the same time somtimes one of
 				;; the notes is lost, so sleep a little bit to hopefully prevent
 				;; that. (0.016667 is 1/60 of a second, AKA one in-game frame)
-				(usleep 16667)))))
+				(usleep (* 3 16667))))))
 	(loop))
