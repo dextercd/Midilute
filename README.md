@@ -40,6 +40,7 @@ Create the build directory and build the midi component with CMake:
 
 ```sh
 $ mkdir build
+$ cd build
 $ cmake ..
 $ cmake --build .
 ```
