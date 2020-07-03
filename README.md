@@ -36,7 +36,7 @@ $ git clone https://github.com/dextercd/Midilute.git
 $ cd Midilute
 ```
 
-Create the build and build it with CMake:
+Create the build directory and build the midi component with CMake:
 
 ```sh
 $ mkdir build
