@@ -20,6 +20,36 @@ If you want something like this for Windows:
 I know that the creator of Lutebot is [working on a new version that has midi device support](https://mordhau.com/forum/topic/13519/mordhau-lute-bot/?page=10#c182).
 There is also [another project](https://github.com/Pygex/LuteController) that seems to support this feature.
 
+## How to build the program
+
+You need Guile, ALSA, a C++ compiler, and CMake to compile the midi component
+of this program. Some OS's like Ubuntu put development components into special
+packages like `guile-2.2-dev` and `asoundlib2-dev`.
+
+Assuming you've got everything you need installed, you should be able to follow
+these instructions:
+
+Clone the project:
+
+```sh
+$ git clone https://github.com/dextercd/Midilute.git
+$ cd Midilute
+```
+
+Create the build directory and build the midi component with CMake:
+
+```sh
+$ mkdir build
+$ cd build
+$ cmake ..
+$ cmake --build .
+```
+
+As long as no errors occurred you should now have a file named
+`libguilemidi.so` in the build directory.
+
+Now you should be able to use the program.
+
 ## How to use the program
 
 You'll need to build the C++ files with CMake. Let's assume the resulting
@@ -28,7 +58,7 @@ libguilemidi.so file is in a directory called build/.
 Now you should be able to run this command.
 
 ```
-$ LTDL_LIBRARY_PATH=build guile main.scm
+$ LTDL_LIBRARY_PATH=build/ guile main.scm
 ```
 
 This will launch Midilute, but playing your midi device will not yet do

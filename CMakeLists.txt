@@ -11,7 +11,8 @@ add_library(guilemidi SHARED
 
 target_compile_features(guilemidi PUBLIC cxx_std_17)
 
-target_link_libraries(guilemidi ALSA::ALSA)
+target_link_libraries(guilemidi ${ALSA_LIBRARIES})
+target_include_directories(guilemidi PRIVATE ${ALSA_INCLUDE_DIRS})
 target_link_libraries(guilemidi ${GUILE_LIBRARIES})
 target_include_directories(guilemidi PRIVATE ${GUILE_INCLUDE_DIRS})
 target_compile_options(guilemidi PUBLIC ${GUILE_CFLAGS_OTHER})
