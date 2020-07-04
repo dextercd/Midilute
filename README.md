@@ -11,7 +11,7 @@ wrote unfortunately only works on Linux.
 
 It uses Guile, ALSA, and xdotool.
 
-* Guile runs on Windows via Cygwin or MinGW, but 
+* Guile runs on Windows via Cygwin or MinGW, but
 * ALSA only runs on Linux.
 * xdotool is available on many \*nix platforms.
 
